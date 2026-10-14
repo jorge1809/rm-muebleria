@@ -1,0 +1,138 @@
+.buscar {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 24px 80px;
+  color: #211e1a;
+}
+.buscar__ruta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 32px;
+  color: #625d56;
+  font-size: 0.9rem;
+}
+.buscar__ruta a {
+  color: inherit;
+}
+.buscar__encabezado h1 {
+  margin: 0 0 16px;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+}
+.buscar__encabezado p {
+  margin: 0 0 32px;
+  color: #625d56;
+  line-height: 1.6;
+}
+.buscar__formulario {
+  margin-bottom: 32px;
+}
+.buscar__formulario > label {
+  display: block;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+.buscar__controles {
+  display: flex;
+  gap: 12px;
+}
+.buscar__controles input {
+  flex: 1;
+  min-width: 0;
+  min-height: 48px;
+  padding: 12px 16px;
+  border: 1px solid #b9afa4;
+  border-radius: 4px;
+  background: #fff;
+  color: #211e1a;
+  font: inherit;
+}
+.buscar__boton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 48px;
+  padding: 12px 24px;
+  border: 0;
+  border-radius: 4px;
+  background: #29241f;
+  color: #fff;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+.buscar__boton:hover {
+  background: #443a31;
+}
+.buscar__cantidad,
+.buscar__mensaje {
+  margin: 0 0 24px;
+  color: #625d56;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+.buscar__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+.buscar__vacio {
+  padding: 32px;
+  background: #f0ede9;
+}
+.buscar__vacio h2 {
+  margin: 0 0 16px;
+  font-size: 1.4rem;
+}
+.buscar__vacio p {
+  color: #625d56;
+  line-height: 1.6;
+}
+.buscar__vacio a {
+  color: #29241f;
+  font-weight: 600;
+}
+.buscar :focus-visible {
+  outline: 2px solid #73624f;
+  outline-offset: 4px;
+}
+
+.buscar__encabezado h1 {
+  overflow-wrap: anywhere;
+}
+.buscar__categorias {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+}
+.buscar__categorias a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 10px 16px;
+  border: 1px solid #b9afa4;
+  border-radius: 4px;
+}
+
+@media (max-width: 850px) {
+  .buscar__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 600px) {
+  .buscar {
+    padding: 32px 20px 60px;
+  }
+  .buscar__controles {
+    flex-direction: column;
+  }
+}
+@media (max-width: 380px) {
+  .buscar__grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,354 @@
+/* =========================================
+   HERO - R&M MUEBLERÍA
+   ========================================= */
+
+.hero {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: clamp(580px, 78svh, 800px);
+  overflow: hidden;
+  background: var(--color-background);
+}
+
+/* =========================================
+   IMAGEN DE FONDO
+   ========================================= */
+
+.hero__visual {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  overflow: hidden;
+}
+
+.hero__imagen {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 58%;
+}
+
+/* =========================================
+   DEGRADADO
+   ========================================= */
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(
+    90deg,
+    #f7f4ef 0%,
+    rgb(247 244 239 / 97%) 15%,
+    rgb(247 244 239 / 88%) 28%,
+    rgb(247 244 239 / 60%) 40%,
+    rgb(247 244 239 / 15%) 57%,
+    transparent 72%
+  );
+  pointer-events: none;
+}
+
+/* =========================================
+   CONTENIDO
+   ========================================= */
+
+.hero__contenido {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 690px);
+  margin-left: max(
+    var(--margen-visual),
+    calc((100vw - var(--ancho-visual)) / 2)
+  );
+  padding: 72px 24px 100px 0;
+  animation: hero-entrada 750ms ease-out both;
+}
+
+/* Etiqueta superior */
+
+.hero__etiqueta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 28px;
+  color: #987557;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+}
+
+.hero__etiqueta-linea {
+  width: 30px;
+  height: 1px;
+  flex-shrink: 0;
+  background: var(--color-accent);
+}
+
+/* Título principal */
+
+.hero__titulo {
+  max-width: 690px;
+  margin: 0;
+  color: var(--color-text);
+  font-family: var(--font-heading);
+  font-size: clamp(3.5rem, 5.5vw, 6.2rem);
+  font-weight: 500;
+  line-height: 1.02;
+  letter-spacing: -0.045em;
+}
+
+.hero__titulo span {
+  display: block;
+  color: var(--color-primary);
+  font-style: italic;
+}
+
+/* Descripción */
+
+.hero__descripcion {
+  max-width: 410px;
+  margin: 28px 0 32px;
+  color: var(--color-text-muted);
+  font-size: clamp(0.98rem, 1.2vw, 1.08rem);
+  line-height: 1.8;
+}
+
+/* =========================================
+   BOTÓN PRINCIPAL
+   ========================================= */
+
+.hero__boton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  padding: 14px 25px;
+  gap: 15px;
+  background: var(--color-primary);
+  color: #fff;
+  font-size: 0.86rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition:
+    background var(--transition-normal),
+    transform var(--transition-normal);
+}
+
+.hero__boton:hover {
+  background: #46594d;
+  transform: translateY(-2px);
+}
+
+.hero__boton:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 4px;
+}
+
+/* =========================================
+   DETALLE DECORATIVO
+   ========================================= */
+
+.hero__detalle {
+  display: flex;
+  align-items: center;
+  margin-top: clamp(45px, 6vw, 85px);
+  gap: 14px;
+}
+
+.hero__detalle-linea {
+  width: 36px;
+  height: 1px;
+  flex-shrink: 0;
+  background: var(--color-accent);
+}
+
+.hero__detalle p {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: 0.78rem;
+  letter-spacing: 0.02em;
+}
+
+/* =========================================
+   ETIQUETA SOBRE LA FOTOGRAFÍA
+   ========================================= */
+
+.hero__imagen-etiqueta {
+  position: absolute;
+  right: clamp(20px, 4vw, 70px);
+  bottom: 26px;
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  padding: 13px 18px;
+  background: rgb(247 244 239 / 92%);
+  color: var(--color-primary);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+
+/* =========================================
+   ANIMACIÓN DE ENTRADA
+   ========================================= */
+
+@keyframes hero-entrada {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================================
+   TABLETAS
+   ========================================= */
+
+@media (max-width: 900px) {
+  .hero {
+    min-height: 680px;
+    align-items: flex-start;
+  }
+
+  .hero::before {
+    background: linear-gradient(
+      90deg,
+      #f7f4ef 0%,
+      rgb(247 244 239 / 96%) 25%,
+      rgb(247 244 239 / 78%) 55%,
+      rgb(247 244 239 / 20%) 100%
+    );
+  }
+
+  .hero__contenido {
+    width: min(100%, 580px);
+    padding: 80px 24px 110px 0;
+  }
+
+  .hero__titulo {
+    font-size: clamp(3.2rem, 7vw, 5rem);
+  }
+}
+
+/* =========================================
+   CELULARES
+   ========================================= */
+
+@media (max-width: 600px) {
+  .hero {
+    min-height: 620px;
+    align-items: flex-start;
+  }
+
+  /* Encuadre de la fotografía */
+
+  .hero__imagen {
+    object-position: 56% center;
+  }
+
+  /* Degradado vertical más natural */
+
+  .hero::before {
+    background: linear-gradient(
+      180deg,
+      #f7f4ef 0%,
+      rgb(247 244 239 / 98%) 18%,
+      rgb(247 244 239 / 93%) 35%,
+      rgb(247 244 239 / 65%) 49%,
+      rgb(247 244 239 / 15%) 66%,
+      transparent 82%
+    );
+  }
+
+  /* Contenido compacto */
+
+  .hero__contenido {
+    width: 100%;
+    margin-left: 0;
+    padding: 42px var(--margen-visual) 80px;
+  }
+
+  .hero__etiqueta {
+    margin-bottom: 20px;
+    font-size: 0.65rem;
+  }
+
+  .hero__titulo {
+    max-width: 450px;
+    font-size: clamp(2.8rem, 10vw, 4rem);
+    line-height: 1.05;
+  }
+
+  .hero__descripcion {
+    max-width: 350px;
+    margin: 20px 0 22px;
+    font-size: 0.94rem;
+    line-height: 1.6;
+  }
+
+  /* Botón principal */
+
+  .hero__boton {
+    min-height: 48px;
+    padding: 12px 22px;
+  }
+
+  /* Ocultar elementos decorativos */
+
+  .hero__detalle {
+    display: none;
+  }
+
+  .hero__imagen-etiqueta {
+    display: none;
+  }
+}
+
+/* =========================================
+   CELULARES PEQUEÑOS
+   ========================================= */
+
+@media (max-width: 380px) {
+  .hero {
+    min-height: 600px;
+  }
+
+  .hero__contenido {
+    padding-top: 36px;
+  }
+
+  .hero__titulo {
+    font-size: clamp(2.65rem, 9.5vw, 3.4rem);
+  }
+
+  .hero__descripcion {
+    font-size: 0.9rem;
+  }
+}
+
+/* =========================================
+   ACCESIBILIDAD
+   ========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__contenido {
+    animation: none;
+  }
+
+  .hero__boton {
+    transition: none;
+  }
+
+  .hero__boton:hover {
+    transform: none;
+  }
+}

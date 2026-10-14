@@ -1,0 +1,91 @@
+.contacto {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin: 0 auto;
+  scroll-margin-top: 100px;
+  width: 100%;
+  max-width: var(--ancho-visual);
+  padding: 48px var(--margen-visual) 64px;
+}
+.contacto__contenido {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: clamp(28px, 4vw, 48px);
+  background: #29241f;
+  color: #fff;
+}
+.contacto__etiqueta {
+  margin-bottom: 16px;
+  color: #c6b8a8;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.contacto__titulo {
+  margin: 0;
+  color: #fff;
+  font-size: clamp(2rem, 3vw, 3rem);
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+}
+.contacto__descripcion {
+  max-width: 500px;
+  margin: 24px 0 28px;
+  color: #d4cec7;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+.contacto__boton {
+  max-width: 100%;
+  min-height: 48px;
+  padding: 12px 20px;
+  border: 0;
+  border-radius: 4px;
+  background: #f5f1eb;
+  color: #29241f;
+  font: inherit;
+  font-weight: 700;
+  line-height: 1.4;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.contacto__boton:hover {
+  background: #fff;
+}
+.contacto__boton:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 4px;
+}
+.contacto__visual {
+  position: relative;
+  min-height: 380px;
+  overflow: hidden;
+}
+.contacto__visual img {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+@media (max-width: 850px) {
+  .contacto {
+    grid-template-columns: 1fr;
+    padding: 40px 20px 48px;
+  }
+  .contacto__contenido {
+    padding: 32px 24px;
+  }
+  .contacto__visual {
+    min-height: 0;
+    aspect-ratio: 16 / 10;
+  }
+}

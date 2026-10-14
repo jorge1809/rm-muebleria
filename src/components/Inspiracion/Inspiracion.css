@@ -1,0 +1,137 @@
+.inspiracion {
+  width: 100%;
+  max-width: var(--ancho-visual);
+  margin: 0 auto;
+  padding: 48px var(--margen-visual) 64px;
+}
+
+.inspiracion__encabezado {
+  max-width: 780px;
+  margin: 0 auto 36px;
+  text-align: center;
+}
+
+.inspiracion__etiqueta {
+  display: block;
+  margin-bottom: 12px;
+  color: var(--color-accent);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.inspiracion__titulo {
+  margin: 0 0 14px;
+  color: var(--color-text);
+  font-family: var(--font-heading);
+  font-size: clamp(2.5rem, 4vw, 3.8rem);
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+}
+
+.inspiracion__encabezado p {
+  margin: 0;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+}
+
+.inspiracion__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.inspiracion-card {
+  min-width: 0;
+}
+
+.inspiracion-card__imagen {
+  overflow: hidden;
+  border-radius: 8px;
+  background: var(--color-sand);
+}
+
+.inspiracion-card__imagen img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  transition: transform 400ms ease;
+}
+
+.inspiracion-card:hover .inspiracion-card__imagen img {
+  transform: scale(1.04);
+}
+
+.inspiracion-card__contenido {
+  padding: 18px 2px;
+}
+
+.inspiracion-card__contenido h3 {
+  margin: 0 0 10px;
+  color: var(--color-text);
+  font-family: var(--font-heading);
+  font-size: clamp(1.5rem, 2vw, 2rem);
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.inspiracion-card__contenido p {
+  margin: 0 0 16px;
+  color: var(--color-text-muted);
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+.inspiracion-card__enlace {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--color-primary);
+  font-size: 0.88rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.inspiracion-card__enlace svg {
+  transition: transform 250ms ease;
+}
+
+.inspiracion-card__enlace:hover svg {
+  transform: translate(3px, -3px);
+}
+
+.inspiracion-card__enlace:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 5px;
+}
+
+@media (max-width: 900px) {
+  .inspiracion__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .inspiracion {
+    padding: 36px var(--margen-visual) 48px;
+  }
+
+  .inspiracion__grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .inspiracion__encabezado {
+    margin-bottom: 28px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .inspiracion-card__imagen img,
+  .inspiracion-card__enlace svg {
+    transition: none;
+  }
+}

@@ -1,0 +1,52 @@
+.buscador {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+  border: 1px solid #ddd6ce;
+  border-radius: 24px;
+  background: #f0ede9;
+}
+.buscador__etiqueta {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+.buscador input {
+  flex: 1;
+  min-width: 0;
+  width: 100%;
+  min-height: 44px;
+  padding: 10px 0 10px 16px;
+  border: 0;
+  background: transparent;
+  color: #211e1a;
+  font: inherit;
+  font-size: 0.9rem;
+}
+.buscador input::placeholder {
+  color: #625d56;
+}
+.buscador button {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: #29241f;
+  cursor: pointer;
+}
+.buscador:focus-within {
+  outline: 2px solid #73624f;
+  outline-offset: 3px;
+}
+.buscador input:focus-visible {
+  outline: none;
+}
