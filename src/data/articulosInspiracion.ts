@@ -1,3 +1,4 @@
+import { rutaPublica } from "../utils/rutaPublica";
 import type { ArticuloInspiracion } from "../types/ArticuloInspiracion";
 
 export const articulosInspiracion: ArticuloInspiracion[] = [
@@ -5,7 +6,7 @@ export const articulosInspiracion: ArticuloInspiracion[] = [
     id: 1,
     titulo: "Cómo elegir el sofá ideal para tu sala",
     descripcion: "Encuentra el equilibrio entre comodidad, tamaño y diseño.",
-    imagen: "/inspiracion/sala.webp",
+    imagen: rutaPublica("/inspiracion/sala.webp"),
     slug: "como-elegir-sofa",
     categoriaSlug: "sofas",
 
@@ -22,7 +23,7 @@ export const articulosInspiracion: ArticuloInspiracion[] = [
         titulo: "Considera el espacio disponible",
         texto:
           "Antes de comprar, mide el lugar donde colocarás el sofá. Deja suficiente espacio para caminar y procura que sus dimensiones mantengan una proporción equilibrada con los demás muebles.",
-        imagen: "/inspiracion/sofa-espacio.webp",
+        imagen: rutaPublica("/inspiracion/sala.webp"),
         imagenAlt: "Sofá ubicado en una sala con espacio de circulación",
         consejo:
           "Mide también puertas, pasillos y accesos para comprobar que el sofá pueda ingresar a tu hogar.",
@@ -32,29 +33,29 @@ export const articulosInspiracion: ArticuloInspiracion[] = [
         titulo: "Elige colores que combinen con tu hogar",
         texto:
           "Los tonos neutros son una opción versátil porque combinan con diferentes estilos de decoración. Puedes agregar personalidad mediante cojines, alfombras y otros accesorios.",
-        imagen: "/inspiracion/sofa-colores.webp",
-        imagenAlt: "Cojines y textiles en tonos neutros sobre un sofá",
+        imagen: rutaPublica("/productos/sofa-oslo-detalle.webp"),
+        imagenAlt: "Detalle del sofá Oslo",
       },
       {
         id: 3,
         titulo: "Valora los materiales y la limpieza",
         texto:
           "Finalmente, considera los materiales y la facilidad de limpieza. Un sofá adecuado debe responder tanto a tus necesidades prácticas como a tus preferencias de diseño.",
-        imagen: "/inspiracion/sofa-materiales.webp",
-        imagenAlt: "Muestras de tejidos y tapizados para sofás",
+        imagen: rutaPublica("/productos/sofa-oslo-lateral.webp"),
+        imagenAlt: "Vista lateral del sofá Oslo",
         consejo:
           "Consulta los cuidados recomendados para cada tipo de tapizado antes de elegir.",
       },
     ],
 
-    imagenColeccion: "/productos/sofa-oslo.webp",
+    imagenColeccion: rutaPublica("/productos/sofa-oslo.webp"),
   },
 
   {
     id: 2,
     titulo: "Ideas para un comedor acogedor",
     descripcion: "Descubre cómo crear un espacio para compartir.",
-    imagen: "/inspiracion/comedor.webp",
+    imagen: rutaPublica("/inspiracion/comedor.webp"),
     slug: "comedor-acogedor",
     categoriaSlug: "mesas",
 
@@ -88,7 +89,7 @@ export const articulosInspiracion: ArticuloInspiracion[] = [
       },
     ],
 
-    imagenColeccion: "/productos/mesa-roble.webp",
+    imagenColeccion: rutaPublica("/productos/mesa-roble.webp"),
   },
 
   {
@@ -96,7 +97,7 @@ export const articulosInspiracion: ArticuloInspiracion[] = [
     titulo: "Crea un dormitorio de ensueño",
     descripcion:
       "Combina texturas, iluminación y muebles para descansar mejor.",
-    imagen: "/inspiracion/dormitorio.webp",
+    imagen: rutaPublica("/inspiracion/dormitorio.webp"),
     slug: "dormitorio-ensueno",
     categoriaSlug: "camas",
 
@@ -130,6 +131,6 @@ export const articulosInspiracion: ArticuloInspiracion[] = [
       },
     ],
 
-    imagenColeccion: "/productos/cama-queen.webp",
+    imagenColeccion: rutaPublica("/productos/cama-queen.webp"),
   },
 ];

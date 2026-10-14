@@ -1,4 +1,5 @@
 import { ArrowUpRight } from "lucide-react";
+import { rutaPublica } from "../../utils/rutaPublica";
 import "./Hero.css";
 
 function Hero() {
@@ -7,7 +8,7 @@ function Hero() {
       <div className="hero__visual">
         <img
           className="hero__imagen"
-          src="/hero-sala.png"
+          src={rutaPublica("/hero-sala.png")}
           alt="Sala moderna y luminosa con sofá gris, mesa de centro y decoración cálida"
           fetchPriority="high"
           decoding="async"

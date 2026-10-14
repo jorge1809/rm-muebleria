@@ -1,5 +1,6 @@
 import "./Contacto.css";
 import { crearEnlaceWhatsApp } from "../../config/contacto";
+import { rutaPublica } from "../../utils/rutaPublica";
 
 function Contacto() {
   return (
@@ -32,7 +33,11 @@ function Contacto() {
       </div>
 
       <div className="contacto__visual">
-        <img src="/productos/mesa-roble.webp" alt="Mesa Roble" loading="lazy" />
+        <img
+          src={rutaPublica("/productos/mesa-roble.webp")}
+          alt="Mesa Roble"
+          loading="lazy"
+        />
       </div>
     </section>
   );
